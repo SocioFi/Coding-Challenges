@@ -11,7 +11,7 @@ Using historical data, create a time series model that:
 4. Includes uncertainty estimates in the predictions
 
 ### Sample Input:
-Use production.csv as sample input
+Use production_data.csv as sample input
 
 ### Expected Output:
 A trained model and a function that takes the latest data point and returns predictions for the next 30 days, including uncertainty estimates.
