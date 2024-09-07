@@ -1,0 +1,57 @@
+#import libraries
+import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.model_selection import train_test_split
+
+#Loading data
+url = 'https://raw.githubusercontent.com/NafisaKhan/Coding-Challenges/NafisaKhan-solution/nlp-specialist/challenge-4/product_review.json'
+data=pd.read_json(url)
+texts=data['query']
+labels=data['intent']
+
+#TF-IDF vectorization
+vectorizer=TfidfVectorizer(max_features=5000)
+X=vectorizer.fit_transform(texts)
+y=labels
+
+#Split the data
+X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=50)
+
+#Train Random Forest
+model=RandomForestClassifier(n_estimators=100)
+model.fit(X_train, y_train)
+
+#Prediction function
+def predict_intent(text):
+    text_vec=vectorizer.transform([text])
+    probs=model.predict_proba(text_vec)
+    pred_label=model.predict(text_vec)[0]
+    
+    # Confidence score
+    confidence=max(probs[0])
+    
+    # Top 3 most likely intents
+    prob_array=probs[0]
+    top_indices=np.argsort(prob_array)[::-1][:3]
+    top_3=[(model.classes_[i], prob_array[i]) for i in top_indices]
+    return pred_label, confidence, top_3
+
+#Seed for reproducibility
+np.random.seed(42)
+
+#Sample 5 random data
+sample_indices=np.random.choice(data.index, size=5, replace=False)
+
+#Extract sample data
+sample_texts=data.loc[sample_indices, 'query']
+sample_labels=data.loc[sample_indices, 'intent']
+
+#Test the model on the sample data
+for text, true_label in zip(sample_texts, sample_labels):
+    pred_label, confidence, top_3=predict_intent(text)
+    print(f"Query: {text}")
+    print(f"True intent: {true_label}")
+    print(f"Predicted intent: {pred_label}, Confidence: {confidence}")
+    print(f"Top 3 intents: {top_3}")
