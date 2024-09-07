@@ -1,3 +1,4 @@
+import re
 #Function For NER System
 def ner(text):
     #Defining the patterns (BD phone,Alphanumeric account,Phone service types)
