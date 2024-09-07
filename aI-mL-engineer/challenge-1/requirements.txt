@@ -1,0 +1,3 @@
+pandas
+langid
+deep-translator
