@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.3
+emoji==2.12.1
+gdown==5.2.0
+numpy==2.1.1
+pandas==2.2.2
+scikit_learn==1.5.1
+torch==2.2.2
+transformers==4.2.2

@@ -1,0 +1,11 @@
+class,confidence,text
+Compliant,0.9998462,All workers are entitled to a minimum of 10 days of paid vacation annually.
+Non Compliant,0.9998074,Overtime is not compensated as per the legal requirement.
+Compliant,0.99984777,Child labor is strictly prohibited in all company operations.
+Non Compliant,0.9998129,Workers are required to work 12-hour shifts without any overtime pay.
+Compliant,0.99984896,Health and safety regulations are strictly followed.
+Non Compliant,0.9998165,Employees are not given any medical insurance.
+Compliant,0.9998479,All employees are provided with annual health check-ups.
+Non Compliant,0.9998087,The company does not provide paid sick leave to employees.
+Compliant,0.9998431,The workplace is free from harassment and discrimination.
+Non Compliant,0.99980813,Wages are paid below the minimum legal requirement.
