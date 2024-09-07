@@ -1,0 +1,30 @@
+import re
+#Function For NER System
+def ner(text):
+    #Defining the patterns (BD phone,Alphanumeric account,Phone service types)
+    patterns={'phone_numbers': r'\b(01[3-9]\d{8})\b',
+              'account_numbers': r'\b[A-Za-z0-9]{5,12}\b', 
+              'service_types': r'\b(prepaid|postpaid|internet)\b'
+              }
+
+    #Finding entities for each pattern
+    extract_entities={}
+    for entity, pattern in patterns.items():
+        matches=[(match.group(), match.start()) for match in re.finditer(pattern, text, re.IGNORECASE)]
+        extract_entities[entity]=matches
+    return extract_entities
+
+def test_ner():
+    #User input
+    s_input=input("Enter a string of text for NER: ")
+    output=ner(s_input)
+    print("\nOutput:")
+    print(output)
+
+test_ner()
+
+
+#demo inputs
+#text1 = "আমার ফোন নাম্বার 01712345678 এবং আমার account number হলো ACC123456"
+#text2 = "I want to switch my prepaid connection to postpaid. My phone number is 01898765432."
+#text3 = "Amr internet package ta upgrade korte chai. Account number: XYZ789012"
