@@ -27,7 +27,7 @@ The project follows a systematic approach using Natural Language Processing (NLP
 First, clone this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-username/labor-law-compliance-classifier.git
+git clone https://github.com/AshfakYeafi/Coding-Challenges.git
 cd labor-law-compliance-classifier
 ```
 

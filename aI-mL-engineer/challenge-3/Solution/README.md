@@ -19,8 +19,15 @@ pip install -r requirements.txt
 
 ## Running the Code
 
-1. **Clone the Repository or Download the Script**
-   - Save the Python file that contains the `QualityControlAgentML` class.
+### 1. Clone the Repository
+
+First, clone this repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/AshfakYeafi/Coding-Challenges.git
+cd /Coding-Challenges/aI-mL-engineer/challenge-3/Solution/
+```
+
    
 2. **Run the Script**
 
@@ -91,9 +98,4 @@ The agent logs each decision, including the reasons, using Python's `logging` mo
 2024-09-06 12:00:00 - INFO - Decision: reject, Reason: Decision based on machine learning model: reject.
 ```
 
-## Customization
-
-- **Model Training**: You can customize the training of the decision tree model by providing your own dataset of past batches and their decisions.
-- **Tolerances**: Adjust tolerances for the measurements and defect rate in the agent for more flexible decision-making.
-```
 

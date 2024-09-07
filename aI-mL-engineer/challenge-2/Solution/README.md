@@ -23,15 +23,23 @@ The approach taken for this project uses Facebook's Prophet model to forecast da
 
 ## Instructions to Run the Code
 
-1. **Install dependencies**:
+1. **Clone the Repository**:
+First, clone this repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/AshfakYeafi/Coding-Challenges.git
+cd /Coding-Challenges/aI-mL-engineer/challenge-2/Solution/
+```
+
+2. **Install dependencies**:
    Install the required Python packages using `pip`:
 
    ```bash
    pip install -r requirements.txt
    ```
-2. **Prepare your data**:
+3. **Prepare your data**:
    Ensure you have a CSV file with historical production data (with columns `Date`, `Worker Attendance`, and `Power Availability Hours`).
-3. **Run the code**:
+4. **Run the code**:
    Use the following command to run the script:
 
    ```bash

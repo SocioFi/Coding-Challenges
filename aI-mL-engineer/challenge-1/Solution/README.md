@@ -27,6 +27,15 @@ pip install -r requirements.txt
 
 ## Usage
 
+### Clone the Repository
+
+First, clone this repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/AshfakYeafi/Coding-Challenges.git
+cd /Coding-Challenges/aI-mL-engineer/challenge-1/Solution/
+```
+
 ### Run the script
 ```bash
 python run.py
