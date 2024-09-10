@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "product_name": "Classic White T-Shirt",
+      "category": "Tops",
+      "price": 19.99,
+      "image_url": "https://img.freepik.com/free-photo/men39s-clothes-hanger-generative-ai_169016-29035.jpg?semt=ais_hybrid"
+    },
+    {
+      "id": 2,
+      "product_name": "Slim Fit Jeans",
+      "category": "Bottoms",
+      "price": 49.99,
+      "image_url": "https://img.freepik.com/free-psd/two-shirts-are-checkered-surface-isolated-transparent-background_191095-22110.jpg?semt=ais_hybrid"
+    },
+    {
+      "id": 3,
+      "product_name": "Casual Hoodie",
+      "category": "Outerwear",
+      "price": 35.99,
+      "image_url": "https://img.freepik.com/free-photo/still-life-spring-wardrobe-switch_23-2150478968.jpg?semt=ais_hybrid"
+    },
+    {
+      "id": 4,
+      "product_name": "Floral Summer Dress",
+      "category": "Dresses",
+      "price": 59.99,
+      "image_url": "https://img.freepik.com/free-photo/fast-fashion-concept-with-full-clothing-store_23-2150871313.jpg?semt=ais_hybrid"
+    },
+    {
+      "id": 5,
+      "product_name": "Leather Jacket",
+      "category": "Outerwear",
+      "price": 120.00,
+      "image_url": "https://img.freepik.com/free-photo/still-life-rendering-jackets-display_23-2149745039.jpg?semt=ais_hybrid"
+    },
+    {
+      "id": 6,
+      "product_name": "Running Shoes",
+      "category": "Footwear",
+      "price": 89.99,
+      "image_url": "https://img.freepik.com/free-photo/stack-men-shirt_1203-2615.jpg?semt=ais_hybrid"
+    },
+    {
+      "id": 7,
+      "product_name": "Wool Scarf",
+      "category": "Accessories",
+      "price": 25.00,
+      "image_url": "https://img.freepik.com/free-photo/jeans-shirt_1203-7407.jpg?semt=ais_hybrid"
+    },
+    {
+      "id": 8,
+      "product_name": "Denim Jacket",
+      "category": "Outerwear",
+      "price": 75.00,
+      "image_url": "https://img.freepik.com/free-photo/medium-shot-woman-wardrobe_23-2149190377.jpg?semt=ais_hybrid"
+    },
+    {
+      "id": 9,
+      "product_name": "Cotton Polo Shirt",
+      "category": "Tops",
+      "price": 30.00,
+      "image_url": "https://img.freepik.com/free-photo/still-life-spring-wardrobe-switch_23-2150478963.jpg?semt=ais_hybrid"
+    },
+    {
+      "id": 10,
+      "product_name": "Chino Shorts",
+      "category": "Bottoms",
+      "price": 40.00,
+      "image_url": "https://img.freepik.com/free-photo/still-life-with-classic-shirts-hanger_23-2150828572.jpg?semt=ais_hybrid"
+    }
+  ]
