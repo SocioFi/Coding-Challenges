@@ -6,7 +6,12 @@ const cors = require('cors');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIO(server);
+
+// Initialize Socket.io with reconnection logic
+const io = socketIO(server, {
+  reconnectionAttempts: 5, // Retry 5 times
+  reconnectionDelay: 2000,  // Wait 2 seconds between retries
+});
 
 app.use(cors());
 app.use(express.json());
