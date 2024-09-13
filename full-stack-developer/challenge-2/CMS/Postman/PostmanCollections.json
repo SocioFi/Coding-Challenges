@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "6f6ad4af-9d16-46f1-99e3-7c67e1d67728",
+		"name": "CMS API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30237098"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Article",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTA4ZDVjNzVkZTc4MTk2N2NhYWYyYSIsImlhdCI6MTcyNTk5MjM2MiwiZXhwIjoxNzI1OTk1OTYyfQ.b5gpDnBVJrxepDuyNhOvF6nNCh42paR_o6hyTmRW-5Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Sample Article\",\n  \"content\": \"This is a sample article content.\",\n  \"language\": \"en\"  // or \"bn\" for Bangla\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Article",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTA4ZDVjNzVkZTc4MTk2N2NhYWYyYSIsImlhdCI6MTcyNTk5MjM2MiwiZXhwIjoxNzI1OTk1OTYyfQ.b5gpDnBVJrxepDuyNhOvF6nNCh42paR_o6hyTmRW-5Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Sample Article\",\n  \"content\": \"This is a sample article content.\",\n  \"language\": \"en\"  // or \"bn\" for Bangla\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Article",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTA4ZDVjNzVkZTc4MTk2N2NhYWYyYSIsImlhdCI6MTcyNTk5MjM2MiwiZXhwIjoxNzI1OTk1OTYyfQ.b5gpDnBVJrxepDuyNhOvF6nNCh42paR_o6hyTmRW-5Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Update the Sample Article\",\n  \"content\": \"This is a updated sample article content.\",\n  \"language\": \"en\"  // or \"bn\" for Bangla\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/articles/66e08f0075de781967caaf2d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"articles",
+						"66e08f0075de781967caaf2d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Article",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTA4ZDVjNzVkZTc4MTk2N2NhYWYyYSIsImlhdCI6MTcyNTk5MjM2MiwiZXhwIjoxNzI1OTk1OTYyfQ.b5gpDnBVJrxepDuyNhOvF6nNCh42paR_o6hyTmRW-5Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Sample Article\",\n  \"content\": \"This is a sample article content.\",\n  \"language\": \"en\"  // or \"bn\" for Bangla\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/articles/66e08f0075de781967caaf2d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"articles",
+						"66e08f0075de781967caaf2d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
